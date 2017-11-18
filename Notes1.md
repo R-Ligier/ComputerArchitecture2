@@ -22,7 +22,7 @@ After the two steps, next steps taken are dependent on the instruction class. Ho
 
 #### **An abstract view of the implementation of the MIPS subset showing the major functional units and the major connections between them.**
 
-![figure4.1](https://gist.github.com/R-Ligier/be73f136dafddfc3812f01249e5e3b7e#file-figure4-1-png "figure 4.1")
+![figure4.1](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.1.png "Figure 4.1")
 
 All instructions start by using the program counter to supply the instruction address to the instruction memory. After the instruction is fetched, the register operands used by an instruction are specified by fields of that instruction. Once the register operands have been fetched, they can be operated on to compute a memory address (for a load or store), to compute an arithmetic result (for an integer arithmetic-logical instruction), or a compare (for a branch).
 If the instruction is an:
