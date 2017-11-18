@@ -31,7 +31,8 @@ If the instruction is an:
 - **Branches:** require the use of the ALU output to determine the next instruction address, which comes either from the ALU (where the PC and branch offsets are summed) or from an adder that increments the current PC by 4.
 
 #### **The basic implementation of the MIPS subset, including the necessary multiplexors and control lines**
-//put figure 4.2 here
+
+![figure4.2](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.2.png "Figure 4.2")
 
 ### **Building a Datapath**
 Datapath elements each instruction needs:
@@ -40,14 +41,14 @@ Datapath elements each instruction needs:
 2. Program counter - register that holds the address of the current instruction.
 3. Adder - increment the PC to the address of next instruction.
 
-//put figure 4.6
+![figure4.6](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.6.png "Figure 4.6")
 
 **R-Format/Type Instructions (arthmetic-logical) = Performs arithmetic/logical operations:**
 - R-format has three register operands:
 - Example: add $t1, $t2, $t3 - $t2 and t3 reads and $t1 writes
 1. Will need a register file and ALU
 
-//put figure 4.7
+![figure4.7](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.7.png "Figure 4.7")
 
 **Load/Store Word Instructions:**
 - General form = lw $t1, offet_value($t2), sw $t1, offset_value ($t2)
@@ -64,7 +65,7 @@ Datapath elements each instruction needs:
 - Uses the ALU to evaluate the branch condition
 - Separate adder to compute the branch target as the sum of the incremented PC and the sign-extended, lower 16-bits of the instruction, shifted left 2 bits.
 
-//put figure 4.9
+![figure4.9](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.9.png "Figure 4.9")
 
 ### **Creating a Single Datapath**
 - Put all datapath components in one to create a single datapath and add the control to complete the implementation
