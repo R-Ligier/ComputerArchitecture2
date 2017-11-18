@@ -1,6 +1,6 @@
-### **Chapter 4.1 - 4.4**
+## **Chapter 4.1 - 4.4**
 
-#### **1.1 Bit Width**
+### **1.1 Bit Width**
 
 1. Given this sign extend unit, what are the normal bitwidth iof input and output?
 
@@ -11,7 +11,7 @@
     A:
 
 
-#### **1.2 - Figure 4.2**
+### **1.2 - Figure 4.2**
 
 ![figure4.2](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.2.png "Figure 4.2")
 
@@ -31,7 +31,7 @@
 
     A:
 
-#### **1.3 - Figure 4.9**
+### **1.3 - Figure 4.9**
 
 ![figure4.9](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.9.png "Figure 4.9")
 
@@ -51,57 +51,56 @@
 
     A: Can remove the add component (not sure if this is right)
 
-#### **1.4 - Figure 4.11**
+### **1.4 - Figure 4.11**
 
 ![Figure 4.11](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.11.png "Figure 4.11")
 
 1. 5th Ed. Ex. 4.4
 2. 5th Ed. Ex. 4.5
 
-### **Appendix B**
+## **Appendix B**
 - Combinational logic
 - Clocking
 - Sum of products
 
-#### **2.1 - Chapter B.2 Boolean Truth Tables/Gates**
-- Operations
-    - A ∧ B - true when both A and B are true
-    - A ∨ B - true when either/or A and B are true
-    - A¯ - true when A is false
-    - A ∧ B - true and A and B are both false
-- Identity
-    - A ∨ 0 = A
-    - A ∧ 1 = A
-    - A ∧ 0 = 0
+### **2.1 - Chapter B.2 Boolean Truth Tables/Gates**
 
-- Inverse
-    - A ∨ A¯ = 1
-    - A ∧ A¯ = 0
+- **OR operator is written as +, as in A+B**
+    - Result is 1 if either of the variables is 1.
+    - Called a logical sum, since its result is 1 if either operand is 1.
+-  **AND operator is written as  * , as in A*B**
+    - Result is 1 only if both inputs are 1.
+    - Called logical product, since its result is 1 only if both operands are 1.
+- **NOT operator is written as Ā**
+    - Result is 1 only if the input is 0.
+    - Acts as an inversion or negation of the value (i.e., if the input is 0 the output is 1, and vice versa).
 
-- Laws
-    - Commutative : A ∨ B = B ∨ A
-    - Associative : (A ∨ B) ∨ C = A ∨ (B ∨ C)
-    - Distributive : A ∨ (B ∧ C) = (A ∨ B) ∧ (A ∨ C) ; A ∧ (B ∨ C) = (A ∧ B) ∨ (A ∧ C)
-    - DeMorgan’s Laws:
-            - A¯ ∨ B¯ = A ∧ B
-            - A¯ ∧ B¯ = A ∨ B
+- **Boolean Algebra -  Laws**
 
-#### **2.2 - Chapter B.3 Combinaional Logic**
-- Decoder
+![Boolean Laws](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/boolLaws.png " ")
+
+### **2.2 - Chapter B.3 Combinaional Logic**
+
+#### **Decoder**
 
 ![Decoder](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/decoder.png "Decoder")
 
 - 3 in 8 out binary decoder
 - Three input lines are used to output all the possible values for 3 bits (0 - 7)
 
-2.2.2 mux
-And - or mux
-multiplexor selects which input to output based on the constrol (S).
-If A = 0 , and B = 1 , depending on S , the mux will output either A or B.
-C = (A ∧ S¯) ∨ (B ∧ S)
-4
-2.2.3 2-level-logic: sum-of-Products | product-of-Sums
-Conver the following equation to sum-of-products format
+#### **Mux (Multiplexor)**
+
+- Multiplexor selects which input to output based on the control/selector value
+- If A = 0 , and B = 1 , depending on S , the mux will output either A or B : C = (A ∧ S¯) ∨ (B ∧ S)
+
+#### **Products of Sum | Sum of Products**
+
+- Only two level of gates: AND, OR
+    - Sum of products = Logical sum (OR) of products (terms using AND operator)
+    - Products of sum = Logical sum (AND) of products (terms using OR operator)
+    
+
+1. Convert the following equation to sum-of-products format
 E = ((A ∧ B) ∨ (A ∧ C) ∨ (B ∧ C)) ∧ (A ∧ B ∧ C)
 E = ((A ∧ B ∧ C¯) ∨ (A ∧ C ∧ B¯) ∨ (C ∧ B ∧ A¯))
 
@@ -111,8 +110,13 @@ E = ((A ∧ B ∧ C¯) ∨ (A ∧ C ∧ B¯) ∨ (C ∧ B ∧ A¯))
 - After some time held , the data value of Q will change, this actually sets our D-flipflop to a new
 state.
 
-1. Why do we need setup and hold time for writing values?
+1. Why do we need to setup and hold time for writing values?
+
+    A:
+
 2. If the data values change, but the clock never changes, is it possible to set a new value in Q?
+
+    A:
 
 #### **2.4 - Chapter B.8 Register File**
 - One of the main parts of the data path (CPU) is the REGISTER FILE
@@ -121,11 +125,22 @@ state.
 - By adding a decoder for the read and write ports, we can use the register file to hold the instructions we’ve been talking about for assembler code.
 
 1. We can have 2 read ports and 1 write port. Why?
-2. What does reading do to the state of the register?
-3. What about writing?
-4. Can we read and write the same register on the same clock cycle?
 
-### **Multicycle**
+    A:
+    
+2. What does reading do to the state of the register?
+
+    A:
+    
+3. What about writing?
+
+    A:
+    
+4. Can we read and write to the same register on the same clock cycle?
+
+    A:
+
+## **Multicycle**
 
 ![Multi-Full](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/multi-full.png "Multi-Full")
 
@@ -141,7 +156,7 @@ state.
 
     A:
 
-#### **Finite State Machine**
+### **Finite State Machine**
 
 ![fsm-fetch](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/fsm-fetch.png "fsm-fetch")
 
