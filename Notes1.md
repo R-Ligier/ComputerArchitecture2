@@ -73,10 +73,15 @@ Datapath elements each instruction needs:
 - Means no datapath resource can be used more than once per instruction
 - If element needed more than once, it must be duplicated.
 - Need a memory for instructions separate from one for data
--
 
 ### **Pipelining**
-Implementation technique in which multiple instructions are overlapped in execution.
+- Implementation technique in which multiple instructions are overlapped in execution.
+-  Pipeline instruction-execution - 5 steps:
+    1. Fetch the instruction memory
+    2. Read registers while decoding the instruction. The regular format\ of MIPS instruction allows reading and decoding occur simultaneously.
+    3. Execute the operation or calculate an address
+    4. Access an operand in data memory
+    5. Write the result into a register
 
 
 ### **Terminology**
