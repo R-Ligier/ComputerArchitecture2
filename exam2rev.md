@@ -1,4 +1,7 @@
+# Computer Architecture 2 - Exam 2 Review
+
 ## **Chapter 4.1 - 4.4**
+=================================================================
 
 ### **1.1 Bit Width**
 
@@ -98,13 +101,10 @@
 - Only two level of gates: AND, OR
     - Sum of products = Logical sum (OR) of products (terms using AND operator)
     - Products of sum = Logical sum (AND) of products (terms using OR operator)
-    
 
-1. Convert the following equation to sum-of-products format
-E = ((A ∧ B) ∨ (A ∧ C) ∨ (B ∧ C)) ∧ (A ∧ B ∧ C)
-E = ((A ∧ B ∧ C¯) ∨ (A ∧ C ∧ B¯) ∨ (C ∧ B ∧ A¯))
 
 #### **2.3 - Chapter B.8 Setup and Hold Time**
+
 - Timing is everything for sequential circuits.
 - Setup - the data line is set ten the clock signals.
 - After some time held , the data value of Q will change, this actually sets our D-flipflop to a new
@@ -119,6 +119,7 @@ state.
     A:
 
 #### **2.4 - Chapter B.8 Register File**
+
 - One of the main parts of the data path (CPU) is the REGISTER FILE
 - This is basically a set of registers that can be read or written.
 - We can implement the registers themselves from D-flipflops.
@@ -171,6 +172,4 @@ state.
 3. For Q2 above, what instruction is associated with this input to ALUSrcB?
 
     A:
-
-fig.ALL-STATES
 
