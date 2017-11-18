@@ -4,14 +4,14 @@
 
 1. Given this sign extend unit, what are the normal bitwidth iof input and output?
 
-A: The sign extension unit has a 16-bit input and 32-bit output
+    A: The sign extension unit has a 16-bit input and 32-bit output
 
 2. If we change the MIPS word size to 64-bits but the offset width stays the same, how many more bits will be added to the value?
 
-A:
+    A:
 
 
-#### **1.2 Figure 4.2**
+#### **1.2 - Figure 4.2**
 
 ![figure4.2](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.2.png "Figure 4.2")
 
@@ -21,37 +21,37 @@ A:
 
 1. Which existing logical blocks (if any) can be used for this instruction?
 
-A:
+    A:
 
-2. Which new functional blocks do we need for this instruction
+2. Which new functional blocks do we need for this instruction?
 
-A:
+    A:
 
 3. What new signals do we need (if any) for the control to support this instruction?
 
-A:
+    A:
 
-#### **1.3 Figure 4.9**
+#### **1.3 - Figure 4.9**
 
 ![figure4.9](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.9.png "Figure 4.9")
 
 1. What instruction uses the hardware shown in 4.9?
 
-A: beq
+    A: beq
 
 2. What operation does the ALU execute for this instruction?
 
-A: Evaluats\es the branch condition
+    A: Evaluates the branch condition
 
 3. Will the RegWrite control line be asserted or deasserted for this instruction?
 
-A:
+    A:
 
 4. If we wanted to use this same hardware to calculate the address for an unconditional branch, what value or component could we remove?
 
-A: Can remove the add component (not sure if this is right)
+    A: Can remove the add component (not sure if this is right)
 
-#### **1.4 Figure 4.11**
+#### **1.4 - Figure 4.11**
 
 ![Figure 4.11](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.11.png "Figure 4.11")
 
@@ -63,7 +63,7 @@ A: Can remove the add component (not sure if this is right)
 - Clocking
 - Sum of products
 
-#### **2.1 B.2 Boolean Truth Tables/Gates**
+#### **2.1 - Chapter B.2 Boolean Truth Tables/Gates**
 - Operations
     - A ∧ B - true when both A and B are true
     - A ∨ B - true when either/or A and B are true
@@ -86,12 +86,14 @@ A: Can remove the add component (not sure if this is right)
             - A¯ ∨ B¯ = A ∧ B
             - A¯ ∧ B¯ = A ∨ B
 
-#### **2.2 B.3 Combinaional Logic**
+#### **2.2 - Chapter B.3 Combinaional Logic**
 - Decoder
 
 ![Decoder](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/decoder.png "Decoder")
-    - 3 in 8 out binary decoder
-    - Three input lines are used to output all the possible values for 3 bits (0 - 7)
+
+- 3 in 8 out binary decoder
+- Three input lines are used to output all the possible values for 3 bits (0 - 7)
+
 2.2.2 mux
 And - or mux
 multiplexor selects which input to output based on the constrol (S).
@@ -103,7 +105,7 @@ Conver the following equation to sum-of-products format
 E = ((A ∧ B) ∨ (A ∧ C) ∨ (B ∧ C)) ∧ (A ∧ B ∧ C)
 E = ((A ∧ B ∧ C¯) ∨ (A ∧ C ∧ B¯) ∨ (C ∧ B ∧ A¯))
 
-#### **2.3 B.8 Setup and Hold Time**
+#### **2.3 - Chapter B.8 Setup and Hold Time**
 - Timing is everything for sequential circuits.
 - Setup - the data line is set ten the clock signals.
 - After some time held , the data value of Q will change, this actually sets our D-flipflop to a new
@@ -112,7 +114,7 @@ state.
 1. Why do we need setup and hold time for writing values?
 2. If the data values change, but the clock never changes, is it possible to set a new value in Q?
 
-#### **2.4 B.8 Register File**
+#### **2.4 - Chapter B.8 Register File**
 - One of the main parts of the data path (CPU) is the REGISTER FILE
 - This is basically a set of registers that can be read or written.
 - We can implement the registers themselves from D-flipflops.
@@ -125,31 +127,35 @@ state.
 
 ### **Multicycle**
 
-• advantages
-• whats been removed
-• whats been added
-• finite-state-machine
-
-
 ![Multi-Full](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/multi-full.png "Multi-Full")
 
 1. How many control lines are required for the ALUSrcB multiplexor?
 
-A:
+    A:
 
 2. What number and 2 bit value are used on the ALUSrcB multiplexor to increment the PC?
 
-A:
+    A:
 
 3. What are the 2 data sources for the MUX controlled by the MemtoReg control line?
 
-A:
+    A:
 
-fig.FSM-FETCH
-1. According to the fig.FSM-FETCH, what is the value of ALUOp, for these 2 states?
-2. According to fig.FSM-FETCH and fig.MULTI-FULL, what input will be selected during state
-1. for ALUSrcB?
-3. For Q.2 above, what instruction is associated with this input to ALUSrcB?
-7
+#### **Finite State Machine**
+
+![fsm-fetch](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/fsm-fetch.png "fsm-fetch")
+
+1. According to the figure, what is the value of ALUOp, for these 2 states?
+
+    A:
+
+2. According to fig.FSM-FETCH and fig.MULTI-FULL, what input will be selected during state 1 for ALUSrcB?
+
+    A:
+
+3. For Q2 above, what instruction is associated with this input to ALUSrcB?
+
+    A:
+
 fig.ALL-STATES
-8
+
