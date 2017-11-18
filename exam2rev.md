@@ -4,7 +4,7 @@
 _________________________________________________________________________________________________________________
 
 
-### **1.1 Bit Width**
+#### **1.1 Bit Width**
 
 1. Given this sign extend unit, what are the normal bitwidth iof input and output?
 
@@ -15,7 +15,7 @@ ________________________________________________________________________________
     A:
 
 
-### **1.2 - Figure 4.2**
+#### **1.2 - Figure 4.2**
 
 ![figure4.2](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.2.png "Figure 4.2")
 
@@ -35,7 +35,7 @@ ________________________________________________________________________________
 
     A:
 
-### **1.3 - Figure 4.9**
+#### **1.3 - Figure 4.9**
 
 ![figure4.9](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.9.png "Figure 4.9")
 
@@ -55,21 +55,21 @@ ________________________________________________________________________________
 
     A: Can remove the add component (not sure if this is right)
 
-### **1.4 - Figure 4.11**
+#### **1.4 - Figure 4.11**
 
 ![Figure 4.11](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/figure4.11.png "Figure 4.11")
 
 1. 5th Ed. Ex. 4.4
 2. 5th Ed. Ex. 4.5
 
-###**Appendix B**
+### **Appendix B**
 _________________________________________________________________________________________________________________
 
 - Combinational logic
 - Clocking
 - Sum of products
 
-### **2.1 - Chapter B.2 Boolean Truth Tables/Gates**
+#### **2.1 - Chapter B.2 Boolean Truth Tables/Gates**
 
 - **OR operator is written as +, as in A+B**
     - Result is 1 if either of the variables is 1.
@@ -161,7 +161,7 @@ ________________________________________________________________________________
 
     A:
 
-### **Finite State Machine**
+#### **Finite State Machine**
 
 ![fsm-fetch](https://github.com/R-Ligier/ComputerArchitecture2/blob/master/fsm-fetch.png "fsm-fetch")
 
